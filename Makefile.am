@@ -47,7 +47,9 @@ ouvrtd_SOURCES = \
 	src/rift-dk2.c \
 	src/tracker.c \
 	src/tracker.h \
-	src/ouvrtd.c
+	src/ouvrtd.c \
+	src/opencv.h \
+	src/opencv.cpp
 
 ouvrtd_CFLAGS = \
 	$(UDEV_CFLAGS) \
@@ -58,7 +60,8 @@ ouvrtd_LDADD = \
 	libouvrt.a \
 	$(UDEV_LIBS) \
 	$(GLIB_LIBS) \
-	$(GST_LIBS)
+	$(GST_LIBS) \
+	$(OPENCV_LIBS)
 
 dump_eeprom_SOURCES = \
 	tools/dump-eeprom.c

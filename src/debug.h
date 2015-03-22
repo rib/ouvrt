@@ -14,8 +14,11 @@ extern int debug_mode;
 
 struct ouvrt_debug_attachment {
 	struct blobservation blobservation;
+	double rot[9];
+	double trans[3];
 	int num_imu_samples;
 	struct imu_state imu_samples[32];
+	double timestamps[4];
 };
 
 int debug_parse_arg(const char *arg);
