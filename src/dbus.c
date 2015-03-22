@@ -139,6 +139,7 @@ static void ouvrt_tracker1_on_flicker_changed(GObject *object,
 
 	flicker = ouvrt_tracker1_get_flicker(tracker);
 
+	ouvrt_rift_dk2_set_flicker(OUVRT_RIFT_DK2(dev), flicker);
 	if (flicker) {
 		g_print("Tracking enabled\n");
 	} else {
